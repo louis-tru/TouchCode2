@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gui xmlns:view="http://truth-x.org/">
+	<head>
+
+    <res>
+      <img src="res/suffix/dir.png" />
+      <img src="res/suffix/expand_dir.png" />
+      <img src="res/icon/loading-50.png" /> 
+      <img src="res/icon/arrow.png" />
+      <img src="res/icon/icon.png" />
+      <img src="res/icon/circle.png" />
+    </res>
+
+		<style>
+      
+      /*--资源管理器控件样式--*/
+      .respanel {
+      
+      }
+      
+      .respanel .node{
+        height: 32px;
+        line-height: 32px;
+        transition-property: margin;
+        /*transition-duration: 200ms;*/
+      }
+      
+      .respanel .node .inner{
+        height: 32px;
+        line-height: 32px;
+      }
+
+      /*展开节点*/
+      .respanel .node.expand{ 
+        
+      }
+
+      .respanel .node .arrow{
+        width: 12px;
+        height: 12px;
+        margin-left: 8px;
+        margin-top: 10px;
+        background: url(res/icon/arrow.png);
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position: center center;
+        float: left;
+        transform: rotateZ(90deg);
+        cursor: pointer;
+      }
+      
+      .respanel .node.expand .arrow{
+        transform: rotateZ(180deg);
+      }
+      
+      .respanel .node .n_icon{
+        width: 26px;
+        margin-left: 4px;
+        height: 100%;
+        background: url(res/icon/icon.png);
+        background-repeat: no-repeat;
+        background-size: 26px;
+        background-position: center 2px;
+        float: left;
+      }
+      
+      .respanel .node.expand .n_icon { }
+      
+      .respanel .node:active{
+        background: #f7f7f7;
+      }
+      
+      .respanel .node.select{
+        background: #EAEAEA;
+      }
+      
+      .respanel .node.drag{
+        position: relative;
+        z-index: 10;
+        opacity: 0.5;
+      }
+      
+      .respanel .node.drag .inner{
+        box-shadow: 0px 0px 8px #000;
+      }
+      
+      .respanel .node .n_text{
+        font-size: 14px;
+        margin-left: 54px;
+        /*margin-right: 10px;*/
+        margin-right: 34px;
+        white-space: nowrap;
+      }
+      
+      .respanel .node .drag_btn{
+        background-image: url(res/icon/drag_mark.png);
+        float: right;
+        width: 50px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 22px;
+        background-position: center center;
+        display: none;
+        cursor:pointer;
+      }
+      
+      .respanel .node .info_btn{
+        background-image: url(res/icon/circle.png);
+        float: right;
+        width: 34px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center center;
+        text-align: center;
+        font-size: 12px;
+        color: #aeaeae;
+        cursor: pointer;
+      }
+      
+      .respanel .node .info_btn:active{
+        /*background-image: url(res/icon/circle-2.png);*/
+        /*color: #296edb;*/
+        opacity: 0.5;
+      }
+      
+      .respanel .node .busy_btn{
+        float: right;
+        width: 34px;
+        height: 100%;
+        display: none;
+        position: relative;
+      }
+
+      .respanel .node .busy_btn div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .respanel .node #busy_progress_text{
+        text-align: center;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-shadow: 1px 1px 1px #000;
+        opacity: 0.6;
+        cursor: pointer;
+      }
+
+      .respanel .node .busy_btn .mark{
+        background-image: url(res/icon/loading-50.png);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center center;
+        animation: loading 3s linear infinite;
+      }
+      
+      /*编辑模式*/
+      .respanel.edit .node{ 
+        height: 31px;
+        line-height: 31px;
+        border-bottom: solid 1px #e8e8e8;
+      }
+
+      .respanel.edit .node .n_text{ 
+        margin-right: 50px;
+      }
+      
+      .respanel.edit .node .drag_btn{
+        display: block;
+      }
+      
+      .respanel.edit .node .info_btn{
+        display: none;
+      }
+      
+      /* 忙线状态 */
+      .respanel .node.busy{
+        
+      }
+      
+      .respanel .node.busy .info_btn{
+        display: none;
+      }
+      
+      .respanel .node.busy .drag_btn{
+        display: none;
+      }
+      
+      .respanel.edit .node.busy .drag_btn{
+        display: none;
+      }
+
+      .respanel.edit .node .busy_btn{
+        margin-right: 8px;
+      }
+      
+      .respanel .node.busy .busy_btn{
+        display: block;
+      }
+
+      .respanel .node.busy .arrow{
+        transform: rotateZ(90deg);
+      }
+      
+      .respanel .children{ display: none; }
+      
+      /*叶子节点不显示箭头*/
+      .respanel .node.leaf .arrow{
+        background-image: none;
+      }
+      
+      .node .dir{ background-image: url(res/suffix/dir.png) !important; }
+      .node.expand .dir{ background-image: url(res/suffix/expand_dir.png) !important; }
+      .node .htm,
+      .node .html{ background-image: url(res/suffix/htm.png) !important; }
+      .node .cpp,
+      .node .cxx,
+      .node .cc{ background-image: url(res/suffix/cpp.png) !important; }
+      .node .c{ background-image: url(res/suffix/c.png) !important; }
+      .node .cfm{ background-image: url(res/suffix/cfm.png) !important; }
+      .node .cjl{ background-image: url(res/suffix/cjl.png) !important; }
+      .node .h{ background-image: url(res/suffix/h.png) !important; }
+      .node .cs{ background-image: url(res/suffix/cs.png) !important; }
+      .node .js{ background-image: url(res/suffix/js.png) !important; }
+      .node .dart{ background-image: url(res/suffix/dart.png) !important; }
+      .node .dot{ background-image: url(res/suffix/dot.png) !important; }
+      .node .css{ background-image: url(res/suffix/css.png) !important; }
+      .node .go{ background-image: url(res/suffix/go.png) !important; }
+      .node .ab{ background-image: url(res/suffix/ab.png) !important; }
+      .node .ham{ background-image: url(res/suffix/ham.png) !important; }
+      .node .m{ background-image: url(res/suffix/m.png) !important; }
+      .node .hx{ background-image: url(res/suffix/hx.png) !important; }
+      .node .java{ background-image: url(res/suffix/java.png) !important; }
+      .node .mm{ background-image: url(res/suffix/mm.png) !important; }
+      .node .py{ background-image: url(res/suffix/py.png) !important; }
+      .node .te{ background-image: url(res/suffix/te.png) !important; }
+      .node .gl{ background-image: url(res/suffix/gl.png) !important; }
+      .node .php{ background-image: url(res/suffix/php.png) !important; }
+      .node .jsp{ background-image: url(res/suffix/jsp.png) !important; }
+      .node .json{ background-image: url(res/suffix/json.png) !important; }
+      .node .conf{ background-image: url(res/suffix/conf.png) !important; }
+      .node .lua{ background-image: url(res/suffix/lua.png) !important; }
+      .node .lp{ background-image: url(res/suffix/lp.png) !important; }
+      .node .ml{ background-image: url(res/suffix/ml.png) !important; }
+      .node .pl{ background-image: url(res/suffix/pl.png) !important; }
+      .node .sql{ background-image: url(res/suffix/sql.png) !important; }
+      .node .bat{ background-image: url(res/suffix/bat.png) !important; }
+      .node .r{ background-image: url(res/suffix/r.png) !important; }
+      .node .sh{ background-image: url(res/suffix/sh.png) !important; }
+      .node .cf{ background-image: url(res/suffix/cf.png) !important; }
+      .node .svg{ background-image: url(res/suffix/svg.png) !important; }
+      .node .xml{ background-image: url(res/suffix/xml.png) !important; }
+      .node .vx{ background-image: url(res/suffix/vx.png) !important; }
+      /*图像文件*/
+      .node .jpg,
+      .node .jpeg,
+      .node .png,
+      .node .gif,
+      .node .tiff,
+      .node .tif,
+      .node .tga,
+      .node .pvr,
+      .node .ico,
+      .node .jpf{ background-image: url(res/icon/image.png) !important; }
+
+		</style>
+	</head>
+	
+  <Node name="TreeNode">
+    <Div id="inner" class="inner">
+      <Div class="arrow" />
+      <Div id="icon_panel" class="n_icon" />
+      <Div id="drag_btn" class="drag_btn" />
+      <Text id="info_btn" class="info_btn">I</Text>
+      <Div id="busy_btn" class="busy_btn">
+        <Div class="mark"/>
+        <Div id="busy_progress_text"/>
+      </Div>
+      <Div id="n_text" class="n_text" />
+    </Div>
+  </Node>
+
+</gui>

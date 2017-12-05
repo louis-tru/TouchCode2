@@ -1,0 +1,24 @@
+/* 
+  Localization.strings
+  TeIDE
+
+  Created by louis on 15/4/13.
+
+*/
+
+"WeChat Contacts"   = "WeChat Contacts";
+"WeChat Moments"    = "WeChat Moments";
+"WeChat Favorites"  = "WeChat Favorites";
+"share_desc_text"   = "Finding a very useful development tools, \
+that the original code can be touched. Please have a try，right now！ ";
+"soft_desc"         = "It is a development tools to touch the code. \
+When you couldn’t use the computer, you can synchronize the code from the FTP, \
+SFTP, SVN, and synchronize to the server after modified quickly. The development tools \
+can highlight error code for real-time , can run the latest version of nodejs, \
+and also can log on SSH to run the shell. If you are a web front programmer, \
+you can run a server and use a browser to view the modified results for real-time.";
+
+"OK"      = "OK";
+"Cancel"  = "Cancel";
+"Delete All"= "Delete All";
+"Delete Local"= "Delete Local";

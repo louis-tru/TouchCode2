@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gui xmlns:view="http://truth-x.org/">
+	<head>
+
+		<style>
+      
+      .east_content {
+        overflow: hidden;
+      }
+      
+		</style>
+		
+	</head>
+
+  <EastContentPanel class="east_content">
+    
+  </EastContentPanel>
+  
+</gui>
+
+

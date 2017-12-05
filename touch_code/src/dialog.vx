@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gui xmlns:view="http://truth-x.org/">
+	<head>
+
+		<style>
+      
+      .dag {
+        font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left:0;
+        z-index: 1000;
+        display: none;
+        box-align: center;
+      }
+      
+      .dag.show {
+        display: -webkit-box;
+      }
+      
+      .dag #bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        transform-style: preserve-3d;
+        opacity: 0.01;
+      }
+      
+      .dag #box {
+        width: 90%;
+        min-width: 262px;
+        max-width: 380px;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        transform: scale(0, 0);
+        transform-style: preserve-3d;
+        opacity: 0.01;
+        <!--background: #E1E4E4;-->
+        background: #fff;
+        border-radius: 7px;
+      }
+      
+      /*-----------------------------------------------*/
+      
+      .dag #title_box {
+        height: 24px;
+        <!--line-height: 24px;--> 
+        padding: 10px 10px 0 10px;
+        text-align: center;
+        font-size: 18px;
+        display: none;
+        margin-bottom: -10px;
+      }
+
+      .dag #content_box {
+        /*padding: 20px;*/
+        padding: 20px 10px;
+        /*font-size: 16px;*/
+        font-size: 14px;
+        <!--white-space: pre-line;-->
+        word-wrap: break-word;
+        <!--line-height: 24px;-->
+        <!--line-height: 35px;-->
+      }
+
+      .dag .buttons.hide {
+				display: none;
+      }
+      
+      .dag #prompt_text{
+        padding-bottom: 10px;
+      }
+
+		</style>
+		
+	</head>
+
+  <!--对话框母板控件-->
+  <Ctrl name="BasicDialogMaster" class="dag">
+    <div id="bg" onclick="m_bg_click_handle" />
+    <div id="box">
+      <placeholder name="content" />
+    </div>
+  </Ctrl>
+  
+  <Ctrl name="DialogMaster" master="BasicDialogMaster">
+    <replace name="content">
+      <div id="title_box" />
+      <div id="content_box">
+        <placeholder name="content" />
+      </div>
+      <div id="buttons_box" class="buttons">
+        <placeholder name="buttons" />
+      </div>
+    </replace>
+  </Ctrl>
+  
+  <Dialog name="AlertDialog" master="DialogMaster">
+    <replace name="content" />
+    <replace name="buttons">
+      <DialogButton value="确定" onclick="close" />
+    </replace>
+  </Dialog>
+  
+  <Dialog name="ConfirmDialog" master="DialogMaster">
+    <replace name="content" />
+    <replace name="buttons">
+	    <DialogButton value="取消" onclick="close" />
+	    <DialogButton value="确定" onclick="close" />
+    </replace>
+  </Dialog>
+  
+  <Dialog name="DeleteFileConfirmDialog" master="DialogMaster">
+    <replace name="content" />
+    <replace name="buttons">
+	    <DialogButton value="取消" onclick="close" />
+	    <DialogButton value="本地" onclick="close" />
+      <DialogButton value="全部" onclick="close" />
+    </replace>
+  </Dialog>
+  
+  <Dialog name="PromptDialog" master="DialogMaster">
+    <replace name="content">
+      <div id="prompt_text" />
+      <view:Input id="input" />
+    </replace>
+    <replace name="buttons">
+	    <DialogButton value="取消" onclick="close" />
+	    <DialogButton value="确定" onclick="close" />
+    </replace>
+  </Dialog>
+  
+  <Dialog name="EmptyShareDialog" master="DialogMaster">
+    <replace name="content" />
+    <replace name="buttons" />
+  </Dialog>
+
+  <Dialog name="TestDialog" master="DialogMaster" title="Title">
+    <replace name="content">
+      Connected Error.
+    </replace>
+    <replace name="buttons">
+	    <DialogButton value="取消" onclick="close" />
+	    <DialogButton value="确定" onclick="close" />
+    </replace>
+  </Dialog>
+  
+</gui>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gui xmlns:view="http://truth-x.org/">
+  
+  <head>
+    <res>
+      <img src="res/icon/arrow4.png" />
+      <img src="res/icon/arrow5.png" />
+    </res>
+    
+    <style>
+      
+      .preferences{ 
+        background: #fff;
+        overflow-scrolling: touch;
+        overflow-y : auto;
+        overflow-x : hidden;
+      }
+      
+      .preferences .scroll {
+        width: 100%; 
+      }
+      
+      .preferences .info {
+        padding: 5px 25px 5px;
+        font-size: 12px;
+        color: #aaa;
+        border-width: 0;
+      }
+      
+      .preferences .panel {
+        margin: 10px; 
+        border-color: #ADACAC; 
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .preferences .panel > div {
+        padding: 0 15px; 
+        height: 48px; 
+        line-height: 50px; 
+        border-bottom-color: #ADACAC;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        background: #fff;
+        overflow: hidden;
+      }
+      
+      .preferences .panel > div .loading_inl {
+        display: none;
+        white-space: pre;
+        padding-left: 11px;
+        text-align: right;
+        float: right;
+      }
+      
+      .preferences .panel > div .text {
+        float: right;
+        color: #8F8F8F;
+        margin-right: 0px;
+      }
+      
+      .preferences .panel > div .text2 {
+        padding-right: 10px; 
+      }
+      
+      .preferences .panel > div.arrow {
+        background-image: url(res/icon/arrow5.png);
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-right: 35px;
+      }
+      
+      .preferences .panel > div:last-child{
+        border-bottom: 0;
+      }
+      
+      .preferences .panel > div > input, 
+      .preferences .panel > div > select{
+        float: right; 
+        margin-top: 16px;
+      }
+      
+      .preferences .panel > div.action {
+        
+      }
+      
+      .preferences .panel > div.action:active {
+        background-color: #ddd;
+      }
+      
+      .preferences .panel > div.loading {
+        pointer-events: none;
+      }
+      
+      .preferences .panel > div.loading .loading_inl {
+        display: inline;
+      }
+      
+      .preferences .check{
+        float: right; 
+        margin-top: 9px;
+        line-height: 0px
+      }
+      
+      .preferences .num{
+        float: right; 
+        margin-top: 9px;
+        line-height: 0px
+      }
+      
+      .preferences .select {
+        transition-property: background;
+        transition-duration: 200ms;
+      }
+      
+      .preferences .select:active{
+        background: #ddd;
+      }
+      
+      .preferences .select .inl{
+        box-align: center;
+        float: right;
+      }
+      
+      .preferences .select #theme_value{
+        margin-right: 18px;
+        color: #8F8F8F;
+        font-size: 14px;
+      }
+      
+      .preferences .select .arrow {
+        float: right;
+        transform: translateX(-3px) translateY(7px) rotateZ(90deg);
+        color: #696969;
+        line-height: 18px;
+        font-size: 18px;
+        background: url(res/icon/arrow5.png);
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 30px;
+      }
+
+      .preferences #editor_container{
+        display: block;
+      }
+      
+      .select_theme {
+        
+      }
+      
+      .select_theme .menu_item {
+        padding-left: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      
+      .select_theme div.dark {
+        background: #444;
+        border-color: #fff;
+        color: #fff;
+      }
+      
+      .select_theme div.dark:active {
+        background: #000;
+      }
+      
+      .select_theme_scroll div.title,
+      .select_theme_scroll div.title2 {
+        color: #666;
+        padding: 12px 15px;
+        padding-left: 8px;
+        border-color: #E5E5E5;
+        border-left-width: 0;
+        border-right-width: 0;
+        display: block;
+        text-decoration: none;
+        cursor: default;
+      }
+      
+      .select_theme_scroll div.title {
+        border-top-width: 0;
+      }
+      
+      .overlay #inl.fine .title {
+        border-width: 0.5px;
+      }
+      
+      .select_theme_scroll div.title:active{
+        background: #fff;
+      }
+      
+      .select_theme_scroll_panel {
+        overflow : hidden;
+        border-radius: 8px;
+      }
+      
+      .select_theme_scroll {
+        overflow-scrolling: touch;
+        overflow-y : auto;
+        overflow-x : hidden;
+      }
+      
+      .preferences #introducer_count {
+        display: inline-block;
+      }
+      
+      .preferences .ani {
+        display: inline-block;
+        animation: loading_introducer_count 1s linear infinite;
+      }
+      
+      @keyframes loading_introducer_count{
+        from { transform: rotateZ(0); }
+        to {transform: rotateZ(360deg);}
+      }
+      
+      .preferences .introducer_table {
+        line-height: 48px; 
+        width: 100%;
+      }
+      
+      .preferences .introducer_table_td0 {
+        white-space: nowrap; 
+        padding-right: 10px;
+      }
+      
+      .preferences .introducer_table_td1 {
+        width: 100%;
+      }
+      
+      .preferences #introducer_id_input {
+        text-align: center; 
+        display: none;
+        border: 0;
+        color: #8F8F8F;
+        height: 24px;
+      }
+      
+      .preferences .disable_events {
+        pointer-events: none;
+      }
+
+      .preferences #act_lite_x_panel {
+        display: none;
+      }
+      
+      .preferences #editor_container {
+        border: 0;
+        position: relative;
+      }
+      
+      .preferences #editor_container .inl_div {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .preferences #editor_container .ace_hidden-cursors .ace_cursor {
+        opacity: 0;
+      }
+      
+    </style>
+    
+  </head>
+  
+  <PreferencesView title="{@Preferences Settings}" class="preferences">
+    <!-- <Scroll class="scroll" id="inl"> -->
+    <Ctrl class="scroll fine_c" id="inl">
+      
+      <div class="panel fine_c" style="display: none">
+        <div class="action arrow" onclick="m_my_id_click_handle">
+          {@我的ID} 
+          <span class="text" id="my_id" />
+        </div>
+        
+        <div class="action arrow" id="introducer_panel" 
+          onclick="m_introducer_panel_click_handle">
+          <table class="introducer_table" border="0" cellpadding="0" cellspacing="0" >
+            <tr>
+              <td class="introducer_table_td0">{@推荐人ID}</td>
+              <td class="introducer_table_td1">
+                <span class="loading_inl"><span class="ani">-</span></span>
+                <span class="text" id="introducer_id_text"></span>
+                <view:Input id="introducer_id_input" 
+                  desc="{@输入ID}"
+                  max_length="12"
+                  fontSize="16" 
+                  onesc="m_introducer_init_status"
+                  onblur="m_introducer_init_status"
+                  onenter="m_introducer_input_enter_handle" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--introducer end-->
+      </div>
+      <div class="info" style="display: none">{@注意: 推荐人ID设置后不能更改}</div>
+      
+      <div id="act_lite_x_panel" style="display: none">
+        <div class="panel">
+          <div>
+            {@激活全部功能} 
+            <view:Checkbox onchange="m_act_all_func_handle" 
+              id="act_all_func_ch" class="check" />
+            <span class="text text2">
+              <span id="share_count" class="">0</span><span style="padding:0 4px;">/</span>5
+            </span>
+          </div>
+        </div>
+        <!--The software to share with five friends and install, you can free use all functional-->
+        <div class="info">{@将此软件推荐给5个好友并安装,便可免费拥有全部功能}</div>
+      </div>
+      
+      <div class="panel fine_c">
+        <div>
+          {@自动换行} 
+          <view:Checkbox onchange="m_auto_line_handle" 
+            id="auto_line_ch" class="check" />
+        </div>
+        <div>
+          {@显示行号} 
+          <view:Checkbox onchange="m_line_number_handle" 
+            id="line_number_ch" class="check" />
+        </div>
+        <div>
+          {@显示制表符} 
+          <view:Checkbox onchange="m_invisibles_handle" 
+            id="invisibles_ch" class="check" />
+        </div>
+        <div>
+          {@显示缩进向导} 
+          <view:Checkbox onchange="m_indent_guides_handle" 
+            id="indent_guides_ch" class="check" />
+        </div>
+      </div>
+      <!--Turning this switch, touch the code editor immediately exhaled the soft keyboard-->
+      <div class="info">{@打开此开关,触摸代码编辑器可立即弹出软键盘}</div>
+      <div class="panel fine_c">
+        <div>
+          {@触摸焦点} 
+          <view:Checkbox onchange="m_auto_touch_focus_hand" 
+            id="touch_focus_ch" class="check" />
+        </div>
+        <div>
+          {@缩进宽度} 
+          <view:NumberRoller onchange="m_indent_width_handle" 
+            id="indent_width_num" min="1" max="8" class="num" />
+        </div>
+        <div>
+          {@字体大小} 
+          <view:NumberRoller onchange="m_font_size_handle" id="font_size_num" 
+            min="12" max="26" class="num" format="{0}px" />
+        </div>
+      </div>
+      
+      <!--For up to 30 several themed selection-->
+      <div class="info">{@可供多达30多种主题风格的选择}</div>
+      <div class="panel fine_c">
+        <div class="select" onclick="m_select_theme_handle">
+          {@主题}
+          <div class="inl">
+            <span id="theme_value" />
+            <span id="arrow" class="arrow"></span>
+          </div>
+        </div>
+        <span id="editor_container">
+          <div class="inl_div" />
+        </span>
+      </div>
+      
+    </Ctrl>
+    <!--</Scroll>-->
+  </PreferencesView>
+	
+  <SelectTheme master="OverlayPanel" priority="left" opacity="1">
+	  <replace name="content">
+	    <div class="select_theme_scroll_panel">
+		    <Ctrl id="scroll" class="select_theme_scroll">
+		      <div class="title fine">{@明亮}:</div>
+		      <view:select_theme_list id="ls0" />
+          <div class="title2 fine">{@黑暗}:</div>
+          <view:select_theme_list id="ls1" />
+        </Ctrl>
+      </div>
+	  </replace>
+	</SelectTheme>
+	
+	<List name="select_theme_list" class="menu option select_theme">
+    <ItemTempl>
+      <div id="item" onclick="m_select_click_handle" theme="{%theme}" 
+        theme_name="{%caption}" 
+        class="menu_item fine {%class_str}">{%caption}</div>
+    </ItemTempl>
+	</List>
+	
+</gui>

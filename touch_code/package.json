@@ -1,0 +1,11 @@
+{
+	"name": "touch_code",
+	"app_name":	"Touch Code 2",
+	"id": "org.nodegui.touchcode",
+	"external_deps": {},
+	"native_deps": {},
+	"ngui_syntax": true,
+	"src": "src",
+	"main": "main.jsx",
+	"version": "1.0.0"
+}

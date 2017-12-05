@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gui xmlns:view="http://truth-x.org/">
+	<head>
+	  
+	  <res>
+	    <img src="res/icon/arrow2.png" />
+	  </res>
+
+		<style>
+		  
+		  .overlay {
+		    position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        opacity: 0.01;
+		  }
+		  
+		  .overlay #bg {
+		    background: #000;
+		    opacity: 0.1;
+		    position: absolute;
+		    z-index: 1;
+		  }
+		  
+		  .overlay #inl{
+		    position: relative;
+        border-radius: 8px;
+        background: #fff;
+        z-index: 2;
+		  }
+		  
+		  .overlay #arrow{
+		    position: absolute;
+        /*top: -13px;
+        left: 80px;*/
+        z-index: 3;
+        width: 30px;
+        height: 13px;
+        background: url(res/icon/arrow2.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        /*background-position: center center;*/
+		  }
+		  
+		</style>
+		
+	</head>
+
+  <Ctrl name="OverlayPanel" class="overlay">
+    <div id="bg" />
+    <div id="inl">
+      <div id="arrow" />
+      <placeholder name="content" />
+    </div>
+  </Ctrl>
+
+</gui>

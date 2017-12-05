@@ -1,0 +1,6 @@
+{
+	"name": "test",
+	"app_name":	"TCTest",
+	"id": "org.nodegui.tctest",
+	"main": "main.js"
+}

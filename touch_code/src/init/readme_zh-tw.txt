@@ -1,0 +1,5 @@
+你好朋友:
+    歡迎使用Touch Code,在此表示忠心感謝.如果你有改進建議,歡迎給我發郵件(Louistru@live.com),我將收集大家的建議做出適當改進.軟件大部分使用javascript開發,如果你對此感興趣,我已經上傳了大部分源碼,可以到
+(https://github.com/louis-tru/touch_code)下載.
+
+    2015-04-13 藍血人

@@ -1,0 +1,21 @@
+/* 
+  Localization.strings
+  TeIDE
+
+  Created by louis on 15/4/13.
+
+*/
+
+"WeChat Contacts" = "微信好友";
+"WeChat Moments" = "微信朋友圈";
+"WeChat Favorites" = "微信收藏";
+"share_desc_text" = "今天發現一個很好用的開發工具,原來代碼是可以觸摸的哦,趕快下載試試吧.";
+"soft_desc"       = "這是一個觸摸代碼開發工具.在你不方便用電腦時,使用它從ftp、sftp、svn同步代碼,\
+修改後可迅速同步到服務器.支持語法高亮代碼實時檢錯,可以運行最新版本nodejs,\
+還可以登錄到ssh運行shell.如果你是一個web前端程員,甚至可以運行一個服務器,\
+實時用瀏覽器查看修改的結果.";
+
+"OK"      = "確定";
+"Cancel"  = "取消";
+"Local" = "本地";
+"All" = "全部";
