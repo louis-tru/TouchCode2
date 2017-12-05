@@ -1,0 +1,6 @@
+{
+	"name": "ngui-ace",
+	"ngui_syntax": true,
+	"main": "main.jsx",
+	"version": "0.1.0"
+}
