@@ -1,0 +1,33 @@
+server
+	file_cache_time 			0
+	max_file_size 				1073741824 # 1024 * 1024 * 1024
+	max_upload_file_size 	1073741824 # 1024 * 1024 * 1024
+	port         					8081
+	auto_index    				true
+	print_log							true
+	root         					.
+	temp         					out/temp
+	documents_path				out/documents
+	disable								ser tplus node_modules
+	router
+		,
+			match			/documents/{filename}
+			service		APIService
+			action		read_documents
+		,
+			match			/read_file/{filename}
+			service		APIService
+			action		read_file
+		,
+			match			/touch
+			service		APIService
+			action		touch
+		,
+			match			/touch_d
+			service		APIService
+			action		touch_d
+		,
+			match			/touch_d2
+			service		APIService
+			action		touch_d2
+manage_server	http://mooogame.com/

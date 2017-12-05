@@ -19,7 +19,7 @@ build_ace:
 	$(NODE) ./tools/update_build_touch_code_ace.js
 
 build_svn:
-	cd ./depe/subversion-1.8.13/apr; ./build-ios.sh
-	cd ./depe/subversion-1.8.13/apr-util; ./build-ios.sh
-	cd ./depe/subversion-1.8.13/serf; ./build-ios.sh
-	cd ./depe/subversion-1.8.13; ./build-ios.sh
+	cd ./depe/subversion/apr; ./build-ios.sh
+	cd ./depe/subversion/apr-util; ./build-ios.sh
+	cd ./depe/subversion/serf; ./build-ios.sh
+	cd ./depe/subversion; ./build-ios.sh
