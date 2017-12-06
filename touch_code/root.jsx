@@ -525,7 +525,7 @@ export const S = {
 	},
 };
 
-export class BarBtn extends ViewController {
+class BarBtn extends ViewController {
   
   get disable() {
     return this.view.receive;
@@ -542,7 +542,185 @@ export class BarBtn extends ViewController {
   }
 }
 
-const bar_btn_vx = (
+// 更新ace编辑器状态
+function update_immediate_focus_status(self) {
+  var ace = text_editor.core;
+  if (ace) {
+    if (preferences_view.get_preferences_item('enable_touch_focus')) {
+      ace.setOption('immediateFocus', true);
+    } else {
+      if (self.m_is_open_soft_keyboard) { // 键盘打开状态
+        ace.setOption('immediateFocus', true);
+      } else {
+        ace.setOption('immediateFocus', false);
+      }
+    }
+  }
+}
+
+// 更新按钮显示状态
+function update_BtnOpenSoftKeyboard_status(self) {
+
+  update_immediate_focus_status(self);
+
+  var main = share_main_viewport;
+  var view = main.east_content.current;
+
+  // 当前没有任何文档被打开,不显示按钮
+  if (!view) {
+    return self.hide();
+  }
+
+  // 打开的不是文本文档,不显示按钮
+  if (!(view instanceof TextEditor)) {
+    return self.hide();
+  }
+
+  // 如果当前文档为只读文档,不显示按钮
+  if (view.getReadOnly()) {
+    return self.hide();
+  }
+  
+  var enable_touch_focus = 
+    preferences_view.get_preferences_item('enable_touch_focus')
+
+  if (self.m_is_open_soft_keyboard) { // 键盘打开状态
+    // if(util.env.ipad){ // ipad 打开状态不需要这个按钮
+    //   self.hide();
+    // }
+    // else {
+    //   self.show();
+    // }
+    self.hide(); // 现在打开键盘状态都不需要显示这个按钮
+    self.add_cls('open'); // 设置打开状态样式
+  } else { // 关闭状态
+    if(enable_touch_focus){ // 点击编辑器能自动弹出键盘,所以不需要这个按钮
+      self.hide();
+    } else {
+      self.show();
+    }
+    self.del_cls('open'); // 设置关闭状态样式
+  }
+
+  var size = displayPort.size;
+
+  if (util.env.ios) {
+    if (util.env.ipad) {
+      if ((size.orientation == 0 || size.orientation == 180)) { // 肖像视图
+        self.del_cls('landscape');
+      } else { // 风景视图
+        self.add_cls('landscape');
+      }
+    } else { 
+      // iphone 无需处理,因为只有肖像视图
+    }
+  } else {
+    // TODO
+  }
+}
+
+// 
+function initBtnOpenSoftKeyboard(self) {
+
+  NativeService.on('open_soft_keyboard', function (evt){
+    if(!self.m_is_open_soft_keyboard){
+      self.m_is_open_soft_keyboard = true;
+      update_BtnOpenSoftKeyboard_status(self);
+    }
+  });
+  
+  NativeService.on('close_soft_keyboard', function (evt){
+    if(self.m_is_open_soft_keyboard){
+      self.m_is_open_soft_keyboard = false;
+      update_BtnOpenSoftKeyboard_status(self);
+    }
+  });
+
+  var main = share_main_viewport;
+  main.east_content.onopen_view.$on(update_BtnOpenSoftKeyboard_status, self);
+  main.east_content.onrelease_view.$on(update_BtnOpenSoftKeyboard_status, self);
+  main.onchange_layout_status.$on(update_BtnOpenSoftKeyboard_status, self);
+  
+  preferences_view.onpreferences_change.$on(update_BtnOpenSoftKeyboard_status, self);
+
+  // 点击事件
+  self.onClock.on(function () {
+
+    var view = main.east_content.current;
+    if (view && view instanceof TextEditor) {
+
+      if (view.getReadOnly()) {
+        view.blur(); // 卸载焦点
+      } else {
+        if(self.m_is_open_soft_keyboard){ // 键盘打开状态,在次点击关闭它
+          view.blur(); // 卸载焦点
+        } else {
+          view.focus(); // 获取焦点
+          self.hide(); // 先隐藏显示
+          (function (){ // 1秒后还没有呼出键盘,在次显示
+            if (!self.m_is_open_soft_keyboard) {
+              self.show();
+            }
+          }).setTimeout(1000);
+        }
+      }
+    } else { // 如果这种状态可能的话,这应该是一个错误.
+          // 所在次点击尝试卸载 ace editor 焦点
+      var ace = text_editor.core;
+      if (ace) {
+        ace.blur();
+      }
+    }
+  });
+}
+
+class BtnOpenSoftKeyboard extends ViewController {
+  
+  m_timeoutid: 0;
+  m_is_open_soft_keyboard: false;
+  
+  get is_open_soft_keyboard() {
+    return this.m_is_open_soft_keyboard;
+  }
+  
+  constructor() {
+    super();
+    this.hide();
+    
+    // if (util.env.ipad) {
+    //   this.add_cls('ipad');
+    // } else if (util.env.ipod || util.env.iphone) {
+    //   this.add_cls('iphone');
+    // } else {
+    //   return; // 不需要这个按钮
+    // }
+    this.onLoadView.on2(initBtnOpenSoftKeyboard);
+  }
+
+  loadView(vx) {
+  	super.loadView(vx);
+  }
+  
+  // @overwrite
+  show() {
+    clearTimeout(this.m_timeoutid);
+    if (!this.visible) {
+      this.m_timeoutid = (()=>super.show()).setTimeout(250);
+    }
+  }
+  
+  // @overwrite
+  hide() {
+    clearTimeout(this.m_timeoutid);
+    if(this.visible) {
+      this.m_timeoutid = (()=>super.hide()).setTimeout(10);
+    // Node.members.hide.call(this);
+    }
+  }
+  
+}
+
+const bar_btn = (
   <BarBtn>
     <Div>
       <Image class="btn" />
@@ -553,22 +731,18 @@ const bar_btn_vx = (
 export const main_vx = (
 
 <Root class="root">
-  <!--西-->
   
   <Indep id="west" class="west">
-    <!-- Bar -->
     <Div id="west_bar" class="main_bar">
-      <!--左-->
       <Div id="west_bar_left" class="main_bar_left">
-        <vx:bar_btn_vx id="res_btn" class="bar_btn res_btn on" onTouchStart="res_btn_click_handle" />
-        <vx:bar_btn_vx id="search_btn" class="bar_btn search_btn" onTouchStart="search_btn_click_handle" />
-        <vx:bar_btn_vx id="add_btn" class="bar_btn add_btn" onClick="m_add_click_handle" />
-        <vx:bar_btn_vx id="share_btn" class="bar_btn share_btn" onClick="m_share_click_handle" />
-        <vx:bar_btn_vx id="more_btn" class="bar_btn more_btn" onClick="m_more_click_handle" />
+        <vx:bar_btn id="res_btn" class="bar_btn res_btn on" onTouchStart="res_btn_click_handle" />
+        <vx:bar_btn id="search_btn" class="bar_btn search_btn" onTouchStart="search_btn_click_handle" />
+        <vx:bar_btn id="add_btn" class="bar_btn add_btn" onClick="m_add_click_handle" />
+        <vx:bar_btn id="share_btn" class="bar_btn share_btn" onClick="m_share_click_handle" />
+        <vx:bar_btn id="more_btn" class="bar_btn more_btn" onClick="m_more_click_handle" />
       </Div>
-      <!--右-->
       <Indep id="west_bar_right" class="main_bar_right">
-        <vx:bar_btn_vx id="edit_btn" class="bar_btn edit_btn" onClick="m_edit_click_handle" />
+        <vx:bar_btn id="edit_btn" class="bar_btn edit_btn" onClick="m_edit_click_handle" />
         <Text id="editing_btn" class="west_edit_btn" onClick="m_edit_click_handle" visible=0> 完成 </Text>
       </Indep>
     </Div>
@@ -580,29 +754,26 @@ export const main_vx = (
     </Div>
   </Indep>
   
-  <!--东-->
   <Indep id="east" class="east">
     <Div id="east_bar" class="main_bar">
-      <!--左-->
       <Div id="east_bar_left" class="main_bar_left" margin_left=8>
-        <vx:bar_btn_vx id="back_res_btn" class="bar_btn back_btn" onClick="m_back_res_click_handle" visible=0 />
-        <vx:bar_btn_vx id="back_btn" class="bar_btn back_btn" onClick="m_back_click_handle" disable=0 />
-        <vx:bar_btn_vx id="forward_btn" class="bar_btn forward_btn" onClick="m_forward_click_handle" disable=0 />
+        <vx:bar_btn id="back_res_btn" class="bar_btn back_btn" onClick="m_back_res_click_handle" visible=0 />
+        <vx:bar_btn id="back_btn" class="bar_btn back_btn" onClick="m_back_click_handle" disable=0 />
+        <vx:bar_btn id="forward_btn" class="bar_btn forward_btn" onClick="m_forward_click_handle" disable=0 />
       </Div>
-      <!--右--> 
       <Indep id="east_bar_right" class="main_bar_right" margin_right=8>
-        <vx:bar_btn_vx id="east_more_btn" class="bar_btn more_btn" onClick="m_east_more_click_handle" />
-        <vx:bar_btn_vx id="internet_btn" class="bar_btn internet_btn" onClick="m_internet_click_handle" />
-        <vx:bar_btn_vx id="run_btn" class="bar_btn run_btn" onClick="m_start_run_click_handle" disable=0 />
-        <vx:bar_btn_vx id="undo_btn" class="bar_btn undo_btn" onClick="m_undo_click_handle" disable=0 />
-        <vx:bar_btn_vx id="redo_btn" class="bar_btn redo_btn" onClick="m_redo_click_handle" disable=0 />
-        <vx:bar_btn_vx id="toggle_btn" class="bar_btn toggle_btn" onClick="m_toggle_click_handle" />
+        <vx:bar_btn id="east_more_btn" class="bar_btn more_btn" onClick="m_east_more_click_handle" />
+        <vx:bar_btn id="internet_btn" class="bar_btn internet_btn" onClick="m_internet_click_handle" />
+        <vx:bar_btn id="run_btn" class="bar_btn run_btn" onClick="m_start_run_click_handle" disable=0 />
+        <vx:bar_btn id="undo_btn" class="bar_btn undo_btn" onClick="m_undo_click_handle" disable=0 />
+        <vx:bar_btn id="redo_btn" class="bar_btn redo_btn" onClick="m_redo_click_handle" disable=0 />
+        <vx:bar_btn id="toggle_btn" class="bar_btn toggle_btn" onClick="m_toggle_click_handle" />
       </Indep>
     </Div>
     
     <!--vx:EastContentPanel id="east_content" class="east_content" /-->
   </Indep>
   
-  <!--OpenSoftKeyboardButton id="btnOpenSoftKeyboard" /--> 
+  <!--BtnOpenSoftKeyboard id="btnOpenSoftKeyboard" /--> 
 </Root>
 );

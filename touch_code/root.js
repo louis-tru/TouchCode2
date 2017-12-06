@@ -103,7 +103,7 @@ function bind_service_event(self) {
   });
 }
 
-function init(self) {
+function initialize(self) {
   
   // bind_service_event(self);
   
@@ -169,9 +169,6 @@ function init(self) {
   update_layout_status(self, false);  // 初始布局状态
 }
 
-/**
- * @private
- */
 function update_layout_status_display(self) {
   switch (self.m_layout_status) {
     case 0:  //0西边布局尺寸为0宽度
@@ -190,8 +187,7 @@ function update_layout_status_display(self) {
 }
 
 /**
- * @fun update_layout_status # 更新布局状态
- * @private
+ * @fun update_layout_status() 更新布局状态
  */
 function update_layout_status(self, is_ani) {
   
@@ -253,8 +249,7 @@ function update_layout_status(self, is_ani) {
  * 0西边布局尺寸为0宽度
  * 1西边布局尺寸为320宽度
  * 2西边布局尺寸为全屏宽度
- * @fun set_layout_status
- * @private
+ * @fun set_layout_status()
  */
 function set_layout_status(self, status, is_ani) {
   if ( app_info.is_small_screen_device ) {
@@ -379,7 +374,7 @@ export class RootViewController extends ViewController {
   
   loadView() {
     super.loadView(root.main_vx);
-    init(this);
+    initialize(this);
   }
   
   reports_error(err) {
@@ -597,181 +592,4 @@ export class RootViewController extends ViewController {
     this.toggle();
   }
 
-}
-
-// 更新ace编辑器状态
-function update_immediate_focus_status (self) {
-  var ace = text_editor.core;
-  if (ace) {
-    if (preferences_view.get_preferences_item('enable_touch_focus')) {
-      ace.setOption('immediateFocus', true);
-    } else {
-      if (self.m_is_open_soft_keyboard) { // 键盘打开状态
-        ace.setOption('immediateFocus', true);
-      } else {
-        ace.setOption('immediateFocus', false);
-      }
-    }
-  }
-}
-
-// 更新按钮显示状态
-function update_BtnOpenSoftKeyboard_status (self) {
-
-  update_immediate_focus_status(self);
-
-  var main = share_main_viewport;
-  var view = main.east_content.current;
-
-  // 当前没有任何文档被打开,不显示按钮
-  if (!view) {
-    return self.hide();
-  }
-
-  // 打开的不是文本文档,不显示按钮
-  if (!(view instanceof TextEditor)) {
-    return self.hide();
-  }
-
-  // 如果当前文档为只读文档,不显示按钮
-  if (view.getReadOnly()) {
-    return self.hide();
-  }
-  
-  var enable_touch_focus = 
-    preferences_view.get_preferences_item('enable_touch_focus')
-
-  if (self.m_is_open_soft_keyboard) { // 键盘打开状态
-    // if(util.env.ipad){ // ipad 打开状态不需要这个按钮
-    //   self.hide();
-    // }
-    // else {
-    //   self.show();
-    // }
-    self.hide(); // 现在打开键盘状态都不需要显示这个按钮
-    self.add_cls('open'); // 设置打开状态样式
-  } else { // 关闭状态
-    if(enable_touch_focus){ // 点击编辑器能自动弹出键盘,所以不需要这个按钮
-      self.hide();
-    } else {
-      self.show();
-    }
-    self.del_cls('open'); // 设置关闭状态样式
-  }
-
-  var size = displayPort.size;
-
-  if (util.env.ios) {
-    if (util.env.ipad) {
-      if ((size.orientation == 0 || size.orientation == 180)) { // 肖像视图
-        self.del_cls('landscape');
-      } else { // 风景视图
-        self.add_cls('landscape');
-      }
-    } else { 
-      // iphone 无需处理,因为只有肖像视图
-    }
-  } else {
-    // TODO
-  }
-}
-
-// 
-function initBtnOpenSoftKeyboard (self) {
-
-  NativeService.on('open_soft_keyboard', function (evt){
-    if(!self.m_is_open_soft_keyboard){
-      self.m_is_open_soft_keyboard = true;
-      update_BtnOpenSoftKeyboard_status(self);
-    }
-  });
-  
-  NativeService.on('close_soft_keyboard', function (evt){
-    if(self.m_is_open_soft_keyboard){
-      self.m_is_open_soft_keyboard = false;
-      update_BtnOpenSoftKeyboard_status(self);
-    }
-  });
-
-  var main = share_main_viewport;
-  main.east_content.onopen_view.$on(update_BtnOpenSoftKeyboard_status, self);
-  main.east_content.onrelease_view.$on(update_BtnOpenSoftKeyboard_status, self);
-  main.onchange_layout_status.$on(update_BtnOpenSoftKeyboard_status, self);
-  
-  preferences_view.onpreferences_change.$on(update_BtnOpenSoftKeyboard_status, self);
-
-  // 点击事件
-  self.onClock.on(function () {
-
-    var view = main.east_content.current;
-    if (view && view instanceof TextEditor) {
-
-      if (view.getReadOnly()) {
-        view.blur(); // 卸载焦点
-      } else {
-        if(self.m_is_open_soft_keyboard){ // 键盘打开状态,在次点击关闭它
-          view.blur(); // 卸载焦点
-        } else {
-          view.focus(); // 获取焦点
-          self.hide(); // 先隐藏显示
-          (function (){ // 1秒后还没有呼出键盘,在次显示
-            if (!self.m_is_open_soft_keyboard) {
-              self.show();
-            }
-          }).setTimeout(1000);
-        }
-      }
-    } else { // 如果这种状态可能的话,这应该是一个错误.
-          // 所在次点击尝试卸载 ace editor 焦点
-      var ace = text_editor.core;
-      if (ace) {
-        ace.blur();
-      }
-    }
-  });
-}
-
-/**
- * 打开软键盘按钮
- */
-export class BtnOpenSoftKeyboard extends ViewController {
-  
-  m_timeoutid: 0;
-  m_is_open_soft_keyboard: false;
-  
-  get is_open_soft_keyboard() {
-    return this.m_is_open_soft_keyboard;
-  }
-  
-  constructor () {
-    Ctrl.call(this, tag);
-    this.hide();
-    
-    if (util.env.ipad) {
-      this.add_cls('ipad');
-    } else if (util.env.ipod || util.env.iphone) {
-      this.add_cls('iphone');
-    } else {
-      return; // 不需要这个按钮
-    }
-    this.onLoadView.on2(initBtnOpenSoftKeyboard);
-  }
-  
-  // @overwrite
-  show () {
-    clearTimeout(this.m_timeoutid);
-    if (!this.visible) {
-      this.m_timeoutid = (()=>super.show()).setTimeout(250);
-    }
-  }
-  
-  // @overwrite
-  hide () {
-    clearTimeout(this.m_timeoutid);
-    if(this.visible) {
-      this.m_timeoutid = (()=>super.hide()).setTimeout(10);
-    // Node.members.hide.call(this);
-    }
-  }
-  
 }
