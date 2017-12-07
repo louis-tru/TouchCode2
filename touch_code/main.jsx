@@ -45,4 +45,4 @@ if (!/^en(_|-)?.*$/.test(util.language)) {
 }
 */
 
-new ngui.GUIApplication().start( <RootViewController /> );
+new ngui.GUIApplication({ multisample: 2, mipmap: 1 }).start(<RootViewController />);

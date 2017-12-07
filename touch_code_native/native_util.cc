@@ -720,7 +720,7 @@ static void request_hide_ad_panel(const FunctionCallbackInfo<Value>& args) {
   set_ad_panel_diaplay(false);
 }
 
-class NativeUtilService: public BaseObject{
+class NativeUtilService: public BaseObject {
   
  public:
   

@@ -28,19 +28,19 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-#include <GeneralUI/gui/app.h>
-#include <GeneralUI/util/sys.h>
-#include <GeneralUI/util/thread.h>
+#include <ngui/app.h>
+#include <ngui/base/sys.h>
+#include <ngui/base/loop.h>
 
 #ifndef TEST_FUNC_NAME
 #define TEST_FUNC_NAME test_fork
 #endif
 
-using namespace generalui;
+using namespace ngui;
 
 void TEST_FUNC_NAME();
 
-x_gui_main() {
+void run_test() {
 
   uint64 st = sys::time();
   

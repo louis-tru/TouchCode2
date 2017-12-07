@@ -29,29 +29,12 @@
  * ***** END LICENSE BLOCK ***** */
 
 #include <ngui/os/ios-app.h>
-#include <ngui/js/js.h>
 
-using namespace ngui;
-
-@interface MyApplication: ApplicationDelegate
-@end
-
-@implementation MyApplication
-
-- (BOOL)application:(UIApplication*)app didFinishLaunchingWithOptions:(NSDictionary*)options {
-  [super application:app didFinishLaunchingWithOptions:options];
-}
-@end
+void run_test();
 
 XX_GUI_MAIN() {
   
-  [ApplicationDelegate set_application_delegate:NSStringFromClass(MyApplication.class)];
-	
-#if DEBUG
-	js::start("--inspect=0.0.0.0:9229 http://192.168.1.11:1026/test --dev --ignore-local=*");
-#else
-	js::start("test");
-#endif
+  run_test();
   
   return 0;
 }

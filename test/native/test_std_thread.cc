@@ -4,8 +4,10 @@
 #include <chrono>
 #include <functional>
 #include <atomic>
-#include <tesla/string.h>
+#include <ngui/base/string.h>
 #include <string>
+
+using namespace ngui;
 
 void f2(int n){
   for (int i = 0; i < 5; ++i) {
@@ -49,15 +51,15 @@ void test_std_thread() {
   << "\", \"" << v[1] << "\"\n";
   
   
-  tesla::String a = "test String";
-  tesla::String b = std::move(a);
+  String a = "test String";
+  String b = std::move(a);
   
-  TSLog(a);
-  TSLog(b);
+  LOG(a);
+  LOG(b);
 
   std::string s = "test";
   
-  TSLog(s);
+  LOG(s.c_str());
 
   int n = 0;
   std::thread t1; // t1 is not a thread

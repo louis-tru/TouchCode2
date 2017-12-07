@@ -8,7 +8,7 @@
 
 #include <mach/vm_statistics.h>
 #include <sys/mman.h>
-#include <tesla/util.h>
+#include <ngui/base/util.h>
 #include <errno.h>
 
 static const int kMmapFd = VM_MAKE_TAG(255);
@@ -44,28 +44,28 @@ void test_mmap(){
       
       switch (errno) {
         case EBADF:
-          TSLog("参数fd 不是有效的文件描述词");
+          LOG("参数fd 不是有效的文件描述词");
           break;
         case EACCES:
-          TSLog("存取权限有误。如果是MAP_PRIVATE 情况下文件必须可读，使用MAP_SHARED则要有PROT_WRITE以及该文件要能写入。");
+          LOG("存取权限有误。如果是MAP_PRIVATE 情况下文件必须可读，使用MAP_SHARED则要有PROT_WRITE以及该文件要能写入。");
           break;
         case EINVAL:
-          TSLog("参数start、length 或offset有一个不合法。");
+          LOG("参数start、length 或offset有一个不合法。");
           break;
         case EAGAIN:
-          TSLog(" 文件被锁住，或是有太多内存被锁住。");
+          LOG(" 文件被锁住，或是有太多内存被锁住。");
           break;
         case ENOMEM:
-          TSLog("内存不足。");
+          LOG("内存不足。");
           break;
         default:
-          TSLog("unknown");
+          LOG("unknown");
           break;
       }
       break;
     }
     
-    TSLog("%lu", result);
+    LOG("%lu", result);
 
   };
 }

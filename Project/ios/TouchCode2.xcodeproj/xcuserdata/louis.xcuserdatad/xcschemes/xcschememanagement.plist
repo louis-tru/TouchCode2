@@ -7,12 +7,12 @@
 		<key>All.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<key>architect-build.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>asn1.xcscheme</key>
 		<dict>
@@ -38,6 +38,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
+		</dict>
+		<key>examples.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>28</integer>
 		</dict>
 		<key>ftp.xcscheme</key>
 		<dict>
@@ -72,7 +77,7 @@
 		<key>ngui-lib.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>ngui.xcscheme</key>
 		<dict>
@@ -117,7 +122,7 @@
 		<key>test.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>29</integer>
 		</dict>
 		<key>through.xcscheme</key>
 		<dict>

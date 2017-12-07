@@ -1,25 +1,25 @@
 
-#include <tesla/exception.h>
-#include <tesla/string.h>
+#include <ngui/base/error.h>
+#include <ngui/base/string.h>
 #include <vector>
 #include <string>
 
-TSUse
+using namespace ngui;
 
-void test_str_ref(StringRRef str){
+void test_str_ref(String&& str){
   String s = move(str);
-  TSLog(s);
+  LOG(s);
 }
 
 void test_std_right_ref() {
   
   std::string std_str = "Test LOG";
   
-  TSLog(std_str);
+  LOG(std_str.c_str());
   
   String str = String::format("ABCD %s", "OK");
   
-  TSLog(str);
+  LOG(str);
   
   String str2 = "ABCD";
   
@@ -31,12 +31,5 @@ void test_std_right_ref() {
   
   test_str_ref(move(str4));
   
-  TSLog(str2);
+  LOG(str2);
 }
-
-
-
-
-
-
-

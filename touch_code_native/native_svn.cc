@@ -117,7 +117,7 @@ class Subversion: public BaseObject {
     jtn::ccharp err_str = "";
     int err_code = 0;
     svn_error_t* err = error;
-    while(error){
+    while (error) {
       if(err){
         if(err->apr_err == SVN_ERR_CANCELLED){ // 这个并不是错误，这个是取消
           is_cancel = true;
@@ -138,7 +138,7 @@ class Subversion: public BaseObject {
       }
     }
     
-    struct Return{
+    struct Return {
       Subversion* self;
       jtn::String cb;
       jtn::String err_message;
@@ -147,7 +147,7 @@ class Subversion: public BaseObject {
       Handle<Value> (*func)(T& data);
       bool is_cancel;
     };
-    self->m_node_ctx->push_run_queue([](NodeContext* ctx, void* data){
+    self->m_node_ctx->push_run_queue([](NodeContext* ctx, void* data) {
       jtn::Handle<Return> h = (Return*)data;
       Isolate* iso = ctx->isolate();
       
@@ -482,7 +482,7 @@ class Subversion: public BaseObject {
   
   // 拉取代码
   void checkout(jtn::CStringRef cb){
-    std::thread([&, cb](){
+    std::thread([&, cb]() {
       std::lock_guard<std::mutex> lock(m_run_lock); // 锁定
       apr_pool_t* pool;
       apr_pool_create(&pool, m_pool);

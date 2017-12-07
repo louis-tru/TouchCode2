@@ -28,24 +28,15 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
-import EventNoticer as EventDelegate from ':util/event';
-//import ':wgui/ctrl::Ctrl';
+import { ViewController } from 'ngui';
 
 function get_base_filename(name) {
   return name.match(/[^\/\\]+$/)[0];
 }
 
-/**
- * @class FileContentView
- * @extends Ctrl
- */
-export class FileContentView extends Ctrl {
-  // @private:
-  
-  // 文件名称
+export class FileContentView extends ViewController {
+
   m_filename: '';
-  
-  // @public:
   
   basename: '';
   
@@ -65,7 +56,7 @@ export class FileContentView extends Ctrl {
   /**
    * 初始化
    */
-  init () { }
+  initialize() { }
   
 	/**
 	 * 获取文件名称

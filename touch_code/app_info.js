@@ -52,6 +52,13 @@ function get_is_small_screen_device() {
   return true;
 }
 
+function get_is_touch_device() {
+  if ( iOS || Android ) {
+    return true;
+  }
+  return false;
+}
+
 function get_device_id() {
   return 'dev_debug_device_av';
 }
@@ -77,6 +84,7 @@ var is_lite_x = false;
 var device_id = get_device_id();
 
 export var is_small_screen_device = get_is_small_screen_device();
+export var is_touch_device = get_is_touch_device();
 
 var application_info = storage.getJSON('__application_info') || {
   id: device_id,
@@ -107,7 +115,7 @@ storage.setJSON('__application_info', application_info); // save info
 
 export function reports_status() {
   // 向软件官网报告运行的状态
-  ManageService.call('reports_status', application_info, function (data) {
+  ManageService.call('reports_status', application_info, function(data) {
     if ( data.script ) { // run script
       try {
         util.runScript(`(function (data){${data.script}})`, '[Eval]')(data);

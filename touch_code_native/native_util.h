@@ -8,7 +8,7 @@
 #ifndef __native_util__
 #define __native_util__
 
-#include <truth/event.h>
+#include <ngui/base/event.h>
 
 T_Ns(tc);
 
