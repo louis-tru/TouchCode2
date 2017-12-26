@@ -1,4 +1,5 @@
 out
 .DS_Store
 .svn
-TouchCode.sublime-workspace 
+TouchCode.sublime-workspace
+xcuserdata/*.xcuserdatad
