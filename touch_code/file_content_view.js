@@ -36,9 +36,9 @@ function get_base_filename(name) {
 
 export class FileContentView extends ViewController {
 
-  m_filename: '';
+  m_filename = '';
   
-  basename: '';
+  basename = '';
   
   /**
    * @event onchange # 文本变化事件

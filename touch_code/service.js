@@ -29,6 +29,6 @@
  * ***** END LICENSE BLOCK ***** */
 
 import 'ngui/util';
-import HttpService from 'ngui/service';
+import { HttpService } from 'ngui/service';
 
 global.ManageService = new HttpService('tc.ManageService', util.config.manage_server);

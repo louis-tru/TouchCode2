@@ -7,8 +7,8 @@ import {
 import { NavpageCollection, Toolbar } from 'ngui/nav';
 import { Navbutton, Mynavpage } from './public';
 import './examples';
-import './about';
-import './review';
+import about_vx from './about';
+import review_vx from './review';
 
 CSS({
   
@@ -65,13 +65,13 @@ CSS({
 })
 
 function review_code(evt) {
-  evt.sender.topCtr.collection.push(review.vx, 1);
+  evt.sender.topCtr.collection.push(review_vx, 1);
 }
 
-const ngui_tools = 'https://github.com/louis-tru/ngui.git';
+const ngui_tools = 'https://www.npmjs.com/package/ngui-tools';
 const ngui_tools_issues_url = 'https://github.com/louis-tru/ngui/issues';
 const examples_source = 'https://github.com/louis-tru/ngui.git';
-const documents = 'http://nodegui.org/';
+const documents = 'http://ngui.io/';
 
 function handle_go_to(evt) {
   var url = evt.sender.url;
@@ -118,7 +118,7 @@ const examples_source_vx = (
 var documents_vx = (
   <Mynavpage title="Documents" source=resolve(__filename)>
     <Div width="full">
-      <Hybrid class="category_title">Now go to <T textColor="#0079ff">nodegui.org</T> to view the document?</Hybrid>
+      <Hybrid class="category_title">Now go to <T textColor="#0079ff">ngui.io</T> to view the document?</Hybrid>
       <Button class="long_btn rm_margin_top" onClick=handle_go_to url=documents>Go Documents</Button>
     </Div>
   </Mynavpage>
@@ -135,7 +135,7 @@ const bug_feedback_vx = (
   </Mynavpage>
 )
 
-var app = new GUIApplication({ multisample: 2, mipmap: 1 }).start(
+var app = new GUIApplication({ multisample: 2 }).start(
   <Root>
 
     <NavpageCollection id="npc" defaultToolbar=default_toolbar_vx>
@@ -162,7 +162,7 @@ var app = new GUIApplication({ multisample: 2, mipmap: 1 }).start(
           
           <Text class="category_title" />
           <Clip class="category">
-            <Navbutton next=about.vx>About</Navbutton>
+            <Navbutton next=about_vx>About</Navbutton>
             <Navbutton next=documents_vx>Documents</Navbutton>
             <Navbutton next=bug_feedback_vx view.borderWidth=0>Bug Feedback</Navbutton>
           </Clip>

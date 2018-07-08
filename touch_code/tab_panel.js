@@ -28,8 +28,8 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
-import ':util';
-import ':util/event';
+import 'ngui/util';
+import 'ngui/event';
 //import ':gui/app';
 //import ':wgui/ctrl::Ctrl';
 //import ':wgui/view';
@@ -50,7 +50,7 @@ function init_TabButton (self) {
 export class TabButton extends Ctrl {
   
   // 面板
-  m_tab: null;
+  m_tab = null;
   
   /**
 	 * @constructor
@@ -105,27 +105,27 @@ function init (self) {
 export class Tab extends Ctrl {
   
   // private:
-  m_name: '';         // 标签名称
-  m_tab_button: null; // 标签按钮
+  m_name = '';         // 标签名称
+  m_tab_button = null; // 标签按钮
   
   /**
    * 激活标签事件
    * @event onactivate
    */
-  onactivate: null;
+  event onactivate;
   
   /**
    * 标签沉默事件
    * @event onreticent
    */
-  onreticent: null;
+  event onreticent;
   
   /**
 	 * @constructor
 	 */
   constructor (tag){
     Ctrl.call(this, tag);
-    event.init_events(this, 'activate', 'reticent');
+    // event.init_events(this, 'activate', 'reticent');
     this.m_tab_button = view.create('TabButton');
     this.m_tab_button.setTab(this);
     init(this);
@@ -315,10 +315,10 @@ export class TabPanel extends Ctrl {
   
   // @private:
   
-  m_active_tab            : null;   // 当前激活的标签
-  m_tabs                  : null;   // 当前面板中的所有标签
-  m_display_tab_btn_count : 0;      // 当前显示的按钮数量
-  m_tab_btn_width         : 0;      // 当前tab btn 的宽度
+  m_active_tab            = null;   // 当前激活的标签
+  m_tabs                  = null;   // 当前面板中的所有标签
+  m_display_tab_btn_count = 0;      // 当前显示的按钮数量
+  m_tab_btn_width         = 0;      // 当前tab btn 的宽度
   
   // @public:
   
@@ -326,14 +326,14 @@ export class TabPanel extends Ctrl {
    * @tab变化事件
    * @event ontabchange
    */
-  ontabchange: null;
+  event ontabchange;
   
   /**
 	 * @constructor
 	 */
   constructor () {
     Ctrl.call(this);
-    event.init_events(this, 'tabchange');
+    // event.init_events(this, 'tabchange');
     this.onload_view.$on(init_TabPanel);
     this.$on('release', release_TabPanel);
     this.m_tabs = [];

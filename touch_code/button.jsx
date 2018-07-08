@@ -146,8 +146,8 @@ CSS({
 
 export class OpenSoftKeyboardButton extends ViewController {
   
-  m_timeoutid: 0;
-  m_is_open_soft_keyboard: false;
+  m_timeoutid = 0;
+  m_is_open_soft_keyboard = false;
   
   get is_open_soft_keyboard() {
     return this.m_is_open_soft_keyboard;

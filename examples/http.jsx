@@ -1,8 +1,8 @@
 import { Div, Button, Input } from 'ngui';
 import 'ngui/util';
 import 'ngui/http';
-import alert from 'ngui/dialog';
-import Mynavpage from './public';
+import { alert } from 'ngui/dialog';
+import { Mynavpage } from './public';
 
 function url(evt) {
 	return evt.sender.topCtr.find('input').value;
@@ -54,7 +54,7 @@ export const vx = (
     		placeholder="Please enter http url .." 
     		value="https://github.com/"
     		//value="http://192.168.1.11:1026/Tools/test_timeout?1"
-    		return_type="done" onKeyenter=keyenter />
+    		return_type="done" onKeyEnter=keyenter />
       <Button class="long_btn" onClick=Get>Get</Button>
       <Button class="long_btn" onClick=Post>Post</Button>
       <Button class="long_btn" onClick=GetSync>GetSync</Button>

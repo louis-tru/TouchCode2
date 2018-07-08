@@ -1,9 +1,33 @@
-import Navpage from 'ngui/nav';
+import { Navpage } from 'ngui/nav';
 import { 
   ViewController, Button, CSS,
   Text, TextNode, atomPixel: px, 
-  Indep, isViewXml, Panel, Scroll, ngui
+  Indep, isViewXml, Panel, Scroll, ngui, Style
 } from 'ngui';
+import 'ngui/util';
+
+// CSS(<Style>
+//   .long_btn {
+//     margin: 10;
+//     margin_bottom: 0;
+//     width: full;
+//     height: 36;
+//     text_line_height: 36;
+//     text_color: #0079ff;
+//     border_radius: 8;
+//     border: ${px} #0079ff;
+//   }
+//   .long_btn2 {
+//     margin: 10;
+//     margin_bottom: 0;
+//     width: full;
+//     height: 36
+//     text_line_height: 36;
+//     text_color: #fff;
+//     border_radius: 8;
+//     border: ${px} #fff;
+//   }
+// </Style>);
 
 CSS({
   
@@ -16,6 +40,12 @@ CSS({
     text_color: "#0079ff",
     border_radius: 8,
     border: `${px} #0079ff`,
+    // border: `2 #0079ff`,
+    // background_color: '#f00',
+    // border_radius: 80,
+    // border: `40 #0079ff`,
+    // border_left_color: '#f00',
+    // border_right_color: '#f00',
   },
     
   '.long_btn2': {
@@ -62,6 +92,7 @@ CSS({
 export class Navbutton extends ViewController {
   
   loadView(vx) {
+    //util.log('---------------------', px);
     super.loadView(
       <Button
         onClick="handle_click"
@@ -92,7 +123,7 @@ export class Navbutton extends ViewController {
 }
 
 export class Mynavpage extends Navpage {
-  source: resolve(__filename);
+  source = resolve(__filename);
   
   loadView(vx) {
     super.loadView(vx);

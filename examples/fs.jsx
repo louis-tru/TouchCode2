@@ -1,8 +1,8 @@
 import { Div, Button, Input } from 'ngui';
 import 'ngui/fs';
 import 'ngui/url';
-import alert from 'ngui/dialog';
-import Mynavpage from './public';
+import { alert } from 'ngui/dialog';
+import { Mynavpage } from './public';
 
 const filename = url.documents('test.txt');
 
@@ -54,7 +54,7 @@ export const vx = (
     	<Input class="input" id="input" 
     		placeholder="Please enter write content.."
     		value="Hello."
-    		returnType="done" onKeyenter=keyenter />
+    		returnType="done" onKeyEnter=keyenter />
       <Button class="long_btn" onClick=WriteFile>WriteFile</Button>
       <Button class="long_btn" onClick=WriteFileSync>WriteFileSync</Button>
       <Button class="long_btn" onClick=ReadFile>ReadFile</Button>

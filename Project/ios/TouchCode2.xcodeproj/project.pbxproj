@@ -377,7 +377,7 @@
 		665DD86BB6485732370B683E /* uglify-js in Resources */ = {isa = PBXBuildFile; fileRef = FACC75C68E5F7BBBA44DEE65 /* uglify-js */; };
 		67ED1C5461BBA66A388E32E4 /* dryice in Resources */ = {isa = PBXBuildFile; fileRef = 271E8412C954DA29F287BAFD /* dryice */; };
 		6911D54E67374FB090406BE4 /* test_std_right_ref.cc in Sources */ = {isa = PBXBuildFile; fileRef = 636D77D3E9818116FD00976A /* test_std_right_ref.cc */; };
-		698E2DC62290CC47291C5D04 /* ngui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40690C05280C0A2AD2D70FEB /* ngui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		698E2DC62290CC47291C5D04 /* ngui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40690C05280C0A2AD2D70FEB /* ngui.framework */; settings = { ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D8587E0A7D5A95C56945DEC /* ssh2 in Resources */ = {isa = PBXBuildFile; fileRef = 42D6B7D44D29148C68695B42 /* ssh2 */; };
 		6DAB9662D7A762405314866D /* ftp in Resources */ = {isa = PBXBuildFile; fileRef = 426465398691458AA293DB9A /* ftp */; };
 		6E9BB4F085FF50833EACBE23 /* uglify-js in Resources */ = {isa = PBXBuildFile; fileRef = FACC75C68E5F7BBBA44DEE65 /* uglify-js */; };
@@ -387,7 +387,7 @@
 		80D085F7DBE67966B0A5198C /* test.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1C53C7431FC32C9B7E614 /* test.cc */; };
 		817ABD92455813244EAA2634 /* ssh2-exec in Resources */ = {isa = PBXBuildFile; fileRef = E52E8680E2D4B04528764D69 /* ssh2-exec */; };
 		852E49A5C91E71DFDC23EC90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E70385F662ABDE6EE9CC36 /* Foundation.framework */; };
-		8A8D065CB33F1C34FF75DA23 /* ngui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40690C05280C0A2AD2D70FEB /* ngui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A8D065CB33F1C34FF75DA23 /* ngui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40690C05280C0A2AD2D70FEB /* ngui.framework */; settings = { ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8B03C7F1C40665EB993CA993 /* inherits in Resources */ = {isa = PBXBuildFile; fileRef = C755B72EA2EEC9353E299B86 /* inherits */; };
 		8BF63096F3EAF94E559849A3 /* streamsearch in Resources */ = {isa = PBXBuildFile; fileRef = 9E6DFBA58A5E378F179E56CD /* streamsearch */; };
 		9118213B85A5D9EB05175C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E89AFA1C65F937B9CA1ED /* UIKit.framework */; };
@@ -416,7 +416,7 @@
 		C1A4E306500D039F91C21BD1 /* ssh2-connect in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D8BEAFB5A5EF22B45574F /* ssh2-connect */; };
 		C2DA5BA546EDABC0F9B4185E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E89AFA1C65F937B9CA1ED /* UIKit.framework */; };
 		C3E3848149B97E4595BDC2DA /* test_fork.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D8AF6A9CC9D746E71A716 /* test_fork.cc */; };
-		C67420963C89394A8902FB90 /* ngui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40690C05280C0A2AD2D70FEB /* ngui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C67420963C89394A8902FB90 /* ngui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40690C05280C0A2AD2D70FEB /* ngui.framework */; settings = { ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB4FDE99049BE999410DB08E /* asn1 in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E84CAC3202CB72D0BD124 /* asn1 */; };
 		D00641C6500EAAE07CB2E614 /* ngui in Resources */ = {isa = PBXBuildFile; fileRef = E3C212E519E605D547CDB6B5 /* ngui */; };
 		D3E4D8C31472D7823D9044DA /* ssh2-streams in Resources */ = {isa = PBXBuildFile; fileRef = 4042360861D53C4A0BDF323E /* ssh2-streams */; };
@@ -1458,6 +1458,7 @@
 		30BFCB6B38517E55764C2D20 /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = package.json; sourceTree = "<group>"; };
 		328B851A4C707E90CA1488BD /* local_zh-tw.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "local_zh-tw.js"; sourceTree = "<group>"; };
 		32AFBB61FDA2717C738DE9FB /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = package.json; sourceTree = "<group>"; };
+		341383071BE63C6930FF4952 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		35C969AFE7B3B6D6D8AEA7BA /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = package.json; sourceTree = "<group>"; };
 		366ADF6D6C51AD6FAAF1932E /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = package.json; sourceTree = "<group>"; };
 		397D8327417D59C2D2F1A7FD /* component.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = component.json; sourceTree = "<group>"; };
@@ -1742,40 +1743,6 @@
 			path = xregexp;
 			sourceTree = "<group>";
 		};
-		0A2C1F97D6DFBEFBF7FC1529 /* ngui */ = {
-			isa = PBXGroup;
-			children = (
-				D91C204967E6D3A5C8F18933 /* README.md */,
-				B20C8A809BF9180DEC3AE2E6 /* action.js */,
-				89F127E00B7C03EBF4C04831 /* app.js */,
-				2B53EFC58079F7D9719197FA /* checkbox.jsx */,
-				70FCB285767A1803684D3C26 /* css.js */,
-				545C516C60F34B74E65B5658 /* ctr.js */,
-				4469BC945A097D13EB44C973 /* dialog.jsx */,
-				7919A9D6E3D7C84F70A34EE6 /* display_port.js */,
-				144AAC3BF601D3F95F2C589F /* event.js */,
-				9E3B0A03D6780F4106151DD6 /* font.js */,
-				3D7522F9ADEBAD0AFB3729C7 /* fs.js */,
-				7817FB7F5436FD82BADD3480 /* http.js */,
-				01714851C569DFE94E83C055 /* keys.js */,
-				148FA3D259D5901DE5E892CD /* list.jsx */,
-				2CE08DAE31EEC58CCD767348 /* media.js */,
-				D46382C8CB5B6EE9E593656F /* nav.jsx */,
-				B01B04C9F6D0237EA0FAAF76 /* ngui.js */,
-				E0188DE9DFA526BDC097A22A /* overlay.jsx */,
-				F54EA012126AAD9A1F0BC93B /* package.json */,
-				C7AE766BF98B67A38F7794C0 /* reader.js */,
-				7E9D1E18F44A58CC7BD77978 /* service.js */,
-				880910492E9EF21A6A6E095F /* stepper.jsx */,
-				CBB43F6FC852992FDDF2D57E /* storage.js */,
-				F5992BCBF3D0A5B5E9ED001B /* sys.js */,
-				DD902807C7403CC0C1F17510 /* url.js */,
-				D3333C7A256ACFC15405A1C4 /* util.js */,
-				3FDF6D0D20CB2E9693FAD1EC /* value.js */,
-			);
-			path = ngui;
-			sourceTree = "<group>";
-		};
 		0FDF196D58CF59E328DC3446 /* ssh2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1882,6 +1849,41 @@
 			path = tunnel;
 			sourceTree = "<group>";
 		};
+		26C77295A1820F25E4444F44 /* ngui */ = {
+			isa = PBXGroup;
+			children = (
+				341383071BE63C6930FF4952 /* LICENSE */,
+				D91C204967E6D3A5C8F18933 /* README.md */,
+				B20C8A809BF9180DEC3AE2E6 /* action.js */,
+				89F127E00B7C03EBF4C04831 /* app.js */,
+				2B53EFC58079F7D9719197FA /* checkbox.jsx */,
+				70FCB285767A1803684D3C26 /* css.js */,
+				545C516C60F34B74E65B5658 /* ctr.js */,
+				4469BC945A097D13EB44C973 /* dialog.jsx */,
+				7919A9D6E3D7C84F70A34EE6 /* display_port.js */,
+				144AAC3BF601D3F95F2C589F /* event.js */,
+				9E3B0A03D6780F4106151DD6 /* font.js */,
+				3D7522F9ADEBAD0AFB3729C7 /* fs.js */,
+				7817FB7F5436FD82BADD3480 /* http.js */,
+				01714851C569DFE94E83C055 /* keys.js */,
+				148FA3D259D5901DE5E892CD /* list.jsx */,
+				2CE08DAE31EEC58CCD767348 /* media.js */,
+				D46382C8CB5B6EE9E593656F /* nav.jsx */,
+				B01B04C9F6D0237EA0FAAF76 /* ngui.js */,
+				E0188DE9DFA526BDC097A22A /* overlay.jsx */,
+				F54EA012126AAD9A1F0BC93B /* package.json */,
+				C7AE766BF98B67A38F7794C0 /* reader.js */,
+				7E9D1E18F44A58CC7BD77978 /* service.js */,
+				880910492E9EF21A6A6E095F /* stepper.jsx */,
+				CBB43F6FC852992FDDF2D57E /* storage.js */,
+				F5992BCBF3D0A5B5E9ED001B /* sys.js */,
+				DD902807C7403CC0C1F17510 /* url.js */,
+				D3333C7A256ACFC15405A1C4 /* util.js */,
+				3FDF6D0D20CB2E9693FAD1EC /* value.js */,
+			);
+			path = ngui;
+			sourceTree = "<group>";
+		};
 		2749DF6E34F9109DE35DADAE /* native */ = {
 			isa = PBXGroup;
 			children = (
@@ -1915,7 +1917,7 @@
 				9E9A94C822A97212068A4843 /* jsbn */,
 				5F584C8048B24FC02EF75230 /* minimist */,
 				026A316B364DE615CD853B25 /* mkdirp */,
-				0A2C1F97D6DFBEFBF7FC1529 /* ngui */,
+				26C77295A1820F25E4444F44 /* ngui */,
 				4AC63B98FE6C2D1396DF079E /* readable-stream */,
 				0FDF196D58CF59E328DC3446 /* ssh2 */,
 				D026753B7739FA40DF102E0C /* ssh2-connect */,
@@ -2427,20 +2429,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-					212748882A2AC5D6FB51F2A3 = {
-						DevelopmentTeam = NLZ66TWKTM;
-						ProvisioningStyle = Automatic;
-					};
-				};
 			};
 			buildConfigurationList = 9685AAF5EE909F495990773C /* Build configuration list for PBXProject "TouchCode2" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				en,
-			);
 			mainGroup = C0A439BB1C13FA461B1051EF;
 			projectDirPath = ../..;
 			projectRoot = "";
@@ -3300,7 +3292,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "ngui-lib";
 				SDKROOT = iphoneos;
@@ -3333,7 +3328,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = xregexp;
 				SDKROOT = iphoneos;
@@ -3366,7 +3364,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ssh2;
 				SDKROOT = iphoneos;
@@ -3396,7 +3397,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = async;
 				SDKROOT = iphoneos;
@@ -3426,7 +3430,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = asn1;
 				SDKROOT = iphoneos;
@@ -3459,7 +3466,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = async;
 				SDKROOT = iphoneos;
@@ -3489,7 +3499,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = ngui;
 				SDKROOT = iphoneos;
@@ -3519,7 +3532,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "core-util-is";
 				SDKROOT = iphoneos;
@@ -3552,7 +3568,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "core-util-is";
 				SDKROOT = iphoneos;
@@ -3582,7 +3601,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = mkdirp;
 				SDKROOT = iphoneos;
@@ -3615,7 +3637,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "ssh2-exec";
 				SDKROOT = iphoneos;
@@ -3648,7 +3673,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = streamsearch;
 				SDKROOT = iphoneos;
@@ -3684,7 +3712,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Project/ios/examples.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks",
 					"./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks",
@@ -3732,7 +3763,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = mkdirp;
 				SDKROOT = iphoneos;
@@ -3765,7 +3799,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = jsbn;
 				SDKROOT = iphoneos;
@@ -3795,7 +3832,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "ssh2-exec";
 				SDKROOT = iphoneos;
@@ -3828,7 +3868,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ngui;
 				SDKROOT = iphoneos;
@@ -3858,7 +3901,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "uglify-js";
 				SDKROOT = iphoneos;
@@ -3891,7 +3937,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = dryice;
 				SDKROOT = iphoneos;
@@ -3924,7 +3973,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = isarray;
 				SDKROOT = iphoneos;
@@ -3957,7 +4009,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = camelize;
 				SDKROOT = iphoneos;
@@ -3987,7 +4042,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = inherits;
 				SDKROOT = iphoneos;
@@ -4017,7 +4075,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = isarray;
 				SDKROOT = iphoneos;
@@ -4047,7 +4108,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = camelize;
 				SDKROOT = iphoneos;
@@ -4080,7 +4144,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = minimist;
 				SDKROOT = iphoneos;
@@ -4110,7 +4177,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = ssh2;
 				SDKROOT = iphoneos;
@@ -4140,7 +4210,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = jsbn;
 				SDKROOT = iphoneos;
@@ -4170,7 +4243,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "architect-build";
 				SDKROOT = iphoneos;
@@ -4203,7 +4279,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = string_decoder;
 				SDKROOT = iphoneos;
@@ -4240,7 +4319,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = streamsearch;
 				SDKROOT = iphoneos;
@@ -4270,7 +4352,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = through;
 				SDKROOT = iphoneos;
@@ -4307,7 +4392,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = string_decoder;
 				SDKROOT = iphoneos;
@@ -4340,7 +4428,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = tunnel;
 				SDKROOT = iphoneos;
@@ -4370,7 +4461,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = minimist;
 				SDKROOT = iphoneos;
@@ -4404,7 +4498,10 @@
 				HEADER_SEARCH_PATHS = test/native;
 				INFOPLIST_FILE = "$(SRCROOT)/Project/ios/test.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks",
 					"./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks",
@@ -4440,7 +4537,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "ngui-lib";
 				SDKROOT = iphoneos;
@@ -4470,7 +4570,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = dryice;
 				SDKROOT = iphoneos;
@@ -4500,7 +4603,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "ssh2-connect";
 				SDKROOT = iphoneos;
@@ -4530,7 +4636,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "ssh2-streams";
 				SDKROOT = iphoneos;
@@ -4563,7 +4672,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "uglify-js";
 				SDKROOT = iphoneos;
@@ -4596,7 +4708,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "readable-stream";
 				SDKROOT = iphoneos;
@@ -4626,7 +4741,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = ftp;
 				SDKROOT = iphoneos;
@@ -4656,7 +4774,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = tunnel;
 				SDKROOT = iphoneos;
@@ -4686,7 +4807,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = wget;
 				SDKROOT = iphoneos;
@@ -4719,7 +4843,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "ssh2-connect";
 				SDKROOT = iphoneos;
@@ -4741,10 +4868,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = NLZ66TWKTM;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
@@ -4758,14 +4882,16 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Project/ios/touch_code.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks",
 					"./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "touch_code-1";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				SYMROOT = ./out/xcodebuild/ios;
@@ -4804,7 +4930,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "readable-stream";
 				SDKROOT = iphoneos;
@@ -4841,7 +4970,10 @@
 				HEADER_SEARCH_PATHS = test/native;
 				INFOPLIST_FILE = "$(SRCROOT)/Project/ios/test.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks",
 					"./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks",
@@ -4879,7 +5011,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "ssh2-streams";
 				SDKROOT = iphoneos;
@@ -4901,10 +5036,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = NLZ66TWKTM;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
@@ -4915,14 +5047,16 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Project/ios/touch_code.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks",
 					"./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "touch_code-1";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				SYMROOT = ./out/xcodebuild/ios;
@@ -4954,7 +5088,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "architect-build";
 				SDKROOT = iphoneos;
@@ -4987,7 +5124,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ftp;
 				SDKROOT = iphoneos;
@@ -5020,7 +5160,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Project/ios/examples.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks",
 					"./out/libs/ios/$(PLATFORM_NAME)/$(CONFIGURATION)/Frameworks",
@@ -5058,7 +5201,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = through;
 				SDKROOT = iphoneos;
@@ -5088,7 +5234,10 @@
 				GCC_STRICT_ALIASING = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = xregexp;
 				SDKROOT = iphoneos;
@@ -5121,7 +5270,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = inherits;
 				SDKROOT = iphoneos;
@@ -5154,7 +5306,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = wget;
 				SDKROOT = iphoneos;
@@ -5187,7 +5342,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = asn1;
 				SDKROOT = iphoneos;

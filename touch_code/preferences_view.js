@@ -217,9 +217,9 @@ function init (self) {
 export class PreferencesView extends NavPage {
   // @private:
   
-  m_editor: null;
+  m_editor = null;
   
-  m_introducer_setting_done_status_var: 1;
+  m_introducer_setting_done_status_var = 1;
 	
 	// @public:
 	
@@ -474,7 +474,7 @@ exports = {
   */
 export class SelectTheme extends OverlayPanel {
   
-  frail: true;
+  frail = true;
   
   /**
     * @constructor

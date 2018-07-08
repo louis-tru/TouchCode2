@@ -160,16 +160,16 @@ function update_layout_status0(self, status, is_ani) {
 /**
  * @class RootViewController
  */
-export class RootViewController extends ViewController {
+export default class RootViewController extends ViewController {
   // 布局状态
   // 0西边布局尺寸为0宽度
   // 1西边布局尺寸为320宽度
   // 2西边布局尺寸为全屏宽度
-  m_layout_status: (app_info.is_small_screen_device ? 2 : 1);
+  m_layout_status = (app_info.is_small_screen_device ? 2 : 1);
   // 东布局尺寸
-  m_content_size: null;
+  m_content_size = null;
   // 动画切换状态
-  m_animate: false;
+  m_animate = false;
   
   /** 
    * @event onBeforeChangeLayoutStatus 前变化

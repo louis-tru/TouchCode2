@@ -1,7 +1,7 @@
 import { Div, Button, Input } from 'ngui';
 import 'ngui/storage';
-import alert from 'ngui/dialog';
-import Mynavpage from './public';
+import { alert } from 'ngui/dialog';
+import { Mynavpage } from './public';
 
 const key = 'test';
 
@@ -39,7 +39,7 @@ export const vx = (
     	<Input class="input" id="input" 
     		placeholder="Please enter value .." 
     		value="Hello."
-    		returnType="done" onKeyenter=keyenter />
+    		returnType="done" onKeyEnter=keyenter />
       <Button class="long_btn" onClick=Get>Get</Button>
       <Button class="long_btn" onClick=Set>Set</Button>
       <Button class="long_btn" onClick=Del>Del</Button>

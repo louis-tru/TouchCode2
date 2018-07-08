@@ -442,26 +442,26 @@ function findByPath(self, path) {
  */
 class TreeNode extends ViewController {
   // private:
-  m_text: '';     // 节点文本
-  m_icon: '';     // 图标类型
-  m_info: 'I';    // info 标记
-  m_leaf: false;  // 是否为叶子节点
-  m_level: -1;    // 节点层级
-  m_children: null;
-  m_children_container: null; // 子节点容器
+  m_text = '';     // 节点文本
+  m_icon = '';     // 图标类型
+  m_info = 'I';    // info 标记
+  m_leaf = false;  // 是否为叶子节点
+  m_level = -1;    // 节点层级
+  m_children = null;
+  m_children_container = null; // 子节点容器
   // 根节点 ResourcesPanel
-  m_root: null;           
+  m_root = null;           
   // 父节点,这个父节点不是普通的父节点,它只能为TreeNode
-  m_parent: null;
+  m_parent = null;
   // 节点是否展开
-  m_is_expand: false;
+  m_is_expand = false;
   // 节点数据,只是单个节点数据,并没有子节点数据,子节点数据应该在子节点上找到
   // 这个数据通常是在父节点调用loadData后被设置的
-  m_data: null;
+  m_data = null;
   // 是否加载了数据
-  m_is_load_data: false;
+  m_is_load_data = false;
   // 是否占线
-  m_is_busy: false;
+  m_is_busy = false;
 
 	/**
 	 * @constructor
@@ -1072,21 +1072,21 @@ function expand_all(self, node, names, cb) {
 export class Tree extends TreeNode {
   
   // 选择的节点
-  m_selected_node: null;      //
-  m_children: null;           // 子节点
-  m_edit: false; // 编辑状态
+  m_selected_node = null;      //
+  m_children = null;           // 子节点
+  m_edit = false; // 编辑状态
   // 编辑拖拽的开始x位置
-  m_drag_start_x: 0;
+  m_drag_start_x = 0;
   // 编辑拖拽的开始y位置
-  m_drag_start_y: 0;
+  m_drag_start_y = 0;
   // 当前拖拽的节点
-  m_drag_node: null;
+  m_drag_node = null;
   // 拖拽相邻的节点
-  m_drag_adjoin: null;
+  m_drag_adjoin = null;
   // 拖拽节点的基础偏移
-  m_dart_basic_offset_y: 0;
+  m_dart_basic_offset_y = 0;
   // 是否有忙线的节点
-  m_busy_node: null;
+  m_busy_node = null;
   
   /**
    * 节点点击事件
